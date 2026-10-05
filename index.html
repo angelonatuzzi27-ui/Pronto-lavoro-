@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProntoLavoro</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f8;
+    color:#172033;
+}
+header{
+    background:#102a43;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+h1{margin:0;font-size:32px}
+.hero{
+    background:#1d4f78;
+    color:white;
+    padding:45px 20px;
+    text-align:center;
+}
+.hero h2{font-size:30px}
+.container{
+    max-width:700px;
+    margin:25px auto;
+    padding:20px;
+}
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0001;
+}
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+}
+input,select,textarea{
+    width:100%;
+    padding:13px;
+    margin-top:7px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+textarea{height:100px}
+button{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    background:#f6c344;
+    border:0;
+    border-radius:9px;
+    font-size:17px;
+    font-weight:bold;
+}
+.info{
+    margin-top:25px;
+    text-align:center;
+    color:#667085;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ProntoLavoro</h1>
+<p>Trova aiuto nella tua zona</p>
+</header>
+
+<section class="hero">
+<h2>Hai bisogno di qualcuno?</h2>
+<p>Raccontaci quale lavoro ti serve e dove.</p>
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Richiedi un servizio</h2>
+
+<form>
+
+<label>Nome</label>
+<input type="text" placeholder="Il tuo nome">
+
+<label>Telefono</label>
+<input type="tel" placeholder="Il tuo numero">
+
+<label>Che lavoro ti serve?</label>
+<select>
+<option>Seleziona un servizio</option>
+<option>Montaggio mobili</option>
+<option>Montaggio infissi</option>
+<option>Pulizie</option>
+<option>Trasloco</option>
+<option>Trasporto</option>
+<option>Giardinaggio</option>
+<option>Imbiancatura</option>
+<option>Altro</option>
+</select>
+
+<label>Comune</label>
+<input type="text" placeholder="Es. Santeramo in Colle">
+
+<label>Descrizione</label>
+<textarea placeholder="Descrivi il lavoro che ti serve"></textarea>
+
+<button type="button" onclick="alert('Grazie! La tua richiesta è stata registrata.')">
+INVIA RICHIESTA
+</button>
+
+</form>
+
+</div>
+
+<div class="info">
+<p>ProntoLavoro è un progetto in fase di sviluppo.</p>
+</div>
+
+</div>
+
+</body>
+</html>
