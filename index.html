@@ -4,130 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProntoLavoro</title>
-
 <style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f6f8;
-    color:#172033;
-}
-header{
-    background:#102a43;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-h1{margin:0;font-size:32px}
-.hero{
-    background:#1d4f78;
-    color:white;
-    padding:45px 20px;
-    text-align:center;
-}
-.hero h2{font-size:30px}
-.container{
-    max-width:700px;
-    margin:25px auto;
-    padding:20px;
-}
-.card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px #0001;
-}
-label{
-    display:block;
-    font-weight:bold;
-    margin-top:15px;
-}
-input,select,textarea{
-    width:100%;
-    padding:13px;
-    margin-top:7px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    box-sizing:border-box;
-    font-size:16px;
-}
-textarea{height:100px}
-button{
-    width:100%;
-    margin-top:20px;
-    padding:15px;
-    background:#f6c344;
-    border:0;
-    border-radius:9px;
-    font-size:17px;
-    font-weight:bold;
-}
-.info{
-    margin-top:25px;
-    text-align:center;
-    color:#667085;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222}
+header{background:#1769aa;color:white;text-align:center;padding:35px 20px}
+header h1{margin:0 0 10px;font-size:34px}
+header p{margin:0;font-size:18px}
+.hero{text-align:center;padding:30px 20px}
+.container{max-width:650px;margin:auto;padding:0 15px 40px}
+.card{background:white;padding:25px;border-radius:14px;box-shadow:0 3px 15px rgba(0,0,0,.1)}
+label{display:block;margin-top:16px;margin-bottom:6px;font-weight:bold}
+input,select,textarea{width:100%;padding:13px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+textarea{min-height:120px}
+button{width:100%;margin-top:20px;padding:14px;background:#1769aa;color:white;border:0;border-radius:8px;font-size:17px;font-weight:bold}
+.info{text-align:center;margin:25px;color:#667085}
 </style>
 </head>
-
 <body>
-
-<header>
-<h1>ProntoLavoro</h1>
-<p>Trova aiuto nella tua zona</p>
-</header>
-
-<section class="hero">
-<h2>Hai bisogno di qualcuno?</h2>
-<p>Raccontaci quale lavoro ti serve e dove.</p>
-</section>
-
-<div class="container">
-
-<div class="card">
-
+<header><h1>ProntoLavoro</h1><p>Trova aiuto nella tua zona</p></header>
+<section class="hero"><h2>Hai bisogno di qualcuno?</h2><p>Raccontaci quale lavoro ti serve e dove.</p></section>
+<div class="container"><div class="card">
 <h2>Richiedi un servizio</h2>
-
-<form>
-
+<form action="https://formspree.io/f/mwlvkjgz" method="post">
 <label>Nome</label>
-<input type="text" placeholder="Il tuo nome">
-
+<input type="text" name="nome" placeholder="Il tuo nome" required>
 <label>Telefono</label>
-<input type="tel" placeholder="Il tuo numero">
-
+<input type="tel" name="telefono" placeholder="Il tuo numero" required>
 <label>Che lavoro ti serve?</label>
-<select>
-<option>Seleziona un servizio</option>
-<option>Montaggio mobili</option>
-<option>Montaggio infissi</option>
-<option>Pulizie</option>
-<option>Trasloco</option>
-<option>Trasporto</option>
-<option>Giardinaggio</option>
-<option>Imbiancatura</option>
-<option>Altro</option>
+<select name="servizio" required>
+<option value="">Seleziona un servizio</option>
+<option>Montaggio mobili</option><option>Montaggio infissi</option><option>Pulizie</option>
+<option>Trasloco</option><option>Trasporto</option><option>Giardinaggio</option>
+<option>Imbiancatura</option><option>Altro</option>
 </select>
-
 <label>Comune</label>
-<input type="text" placeholder="Es. Santeramo in Colle">
-
+<input type="text" name="comune" placeholder="Es. Santeramo in Colle" required>
 <label>Descrizione</label>
-<textarea placeholder="Descrivi il lavoro che ti serve"></textarea>
-
-<button type="button" onclick="alert('Grazie! La tua richiesta è stata registrata.')">
-INVIA RICHIESTA
-</button>
-
+<textarea name="descrizione" placeholder="Descrivi il lavoro che ti serve"></textarea>
+<button type="submit">INVIA RICHIESTA</button>
 </form>
-
 </div>
-
-<div class="info">
-<p>ProntoLavoro è un progetto in fase di sviluppo.</p>
+<div class="info"><p>ProntoLavoro è un progetto in fase di sviluppo.</p></div>
 </div>
-
-</div>
-
 </body>
 </html>
